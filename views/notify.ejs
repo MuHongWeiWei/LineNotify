@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINE OAuth 授權</title>
+</head>
+<body>
+<h1>LINE OAuth 授權</h1>
+<p>點擊下面的按鈕以授權 LINE Notify</p>
+<button id="authorizeButton">使用 LINE 進行授權</button>
+
+<script>
+    const client_id = '<%= LINE_CLIENT_ID %>'
+    const redirect_uri = '<%= LINE_REDIRECT_URI %>'
+
+    document.getElementById('authorizeButton').addEventListener('click', () => {
+        // 導航到授權 URL
+        window.location.href = 'https://notify-bot.line.me/oauth/authorize?' +
+            'response_type=code' +
+            '&scope=notify' +
+            '&response_mode=form_post' +
+            `&client_id=${client_id}` +
+            `&redirect_uri=${redirect_uri}` +
+            '&state=Patrick'
+    });
+</script>
+</body>
+</html>

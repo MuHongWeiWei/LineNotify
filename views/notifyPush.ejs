@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINE Notify 訊息發送</title>
+</head>
+<body>
+<h1>LINE Notify 訊息發送</h1>
+
+<form id="lineNotifyForm" action="/notify/push" method="post">
+    <div>
+        <label for="message">訊息：</label>
+        <input type="text" id="message" name="message" required>
+    </div>
+    <br>
+    <div>
+        <button type="submit">發送訊息</button>
+    </div>
+</form>
+</body>
+</html>
